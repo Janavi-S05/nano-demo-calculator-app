@@ -23,7 +23,10 @@ baseRouter.post('/subtract', (req, res) => {
     const {first, second} = req.body;
     res.json({ "result": first-second })
 });
-
+baseRouter.post('/multiple', (req, res) => {
+    const {first, second} = req.body;
+    res.json({ "result": first*second })
+});
 app.use(baseUrl, baseRouter);
 app.listen(PORT, () => {
     console.log("Server running at PORT", PORT);
